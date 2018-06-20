@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time    : 2018/6/19 23:07
 # @Author  : py
-# @Email   : zhao94254@gmail.com
+# @Email   : zpy94254@gmail.com
 # @File    : codecheck.py
 # @Software: PyCharm
 from __future__ import division
