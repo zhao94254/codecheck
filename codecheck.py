@@ -4,16 +4,11 @@
 # @Email   : zhao94254@gmail.com
 # @File    : codecheck.py
 # @Software: PyCharm
+from __future__ import division
 
 import linecache
 import os
 import argparse
-import sys
-
-
-if sys.version_info.major != 3:
-    print("Python version must > 2")
-    raise AssertionError
 
 
 # 统计一个模块中类、函数的行数
