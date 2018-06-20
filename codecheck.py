@@ -7,6 +7,14 @@
 
 import linecache
 import os
+import argparse
+import sys
+
+
+if sys.version_info.major != 3:
+    print("Python version must > 2")
+    raise AssertionError
+
 
 # 统计一个模块中类、函数的行数
 
@@ -106,8 +114,13 @@ class CodeCheck:
         print("class", cal_percent(split_data(self._map['class'])))
         print("func", cal_percent(split_data(self._map['func'])))
 
-
-if __name__ == '__main__':
-    c = CodeCheck('D:\\py3_6\\Lib\\site-packages\\django')
+def main():
+    parser = argparse.ArgumentParser(description="Run \r\n -c check & count code quality"
+                                     )
+    parser.add_argument("-c", '--check', dest="name", default=False)
+    args = parser.parse_args()
+    c = CodeCheck(args.name)
     c.codecheck()
 
+if __name__ == '__main__':
+    main()
