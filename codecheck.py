@@ -117,9 +117,9 @@ class CodeCheck:
 def main():
     parser = argparse.ArgumentParser(description="Run \r\n -c check & count code quality"
                                      )
-    parser.add_argument("-c", '--check', dest="name", default=False)
+    parser.add_argument("-c", '--check', dest="path", default=False)
     args = parser.parse_args()
-    c = CodeCheck(args.name)
+    c = CodeCheck(args.path)
     c.codecheck()
 
 if __name__ == '__main__':
